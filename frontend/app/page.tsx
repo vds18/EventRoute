@@ -39,9 +39,6 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
           <Link href="/" className="text-2xl font-extrabold tracking-tight">
             Event<span className="text-blue-400">Route</span>
-            <span className="ml-2 align-top text-xs font-medium text-slate-500">
-              PS1
-            </span>
           </Link>
 
           <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">

@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:5000/api";
+
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
 
 export async function getEvents() {
   const response = await fetch(`${API_URL}/events`);
@@ -19,6 +21,7 @@ export async function getEvent(id: string) {
 
   return response.json();
 }
+
 export async function calculateRoute(
   startLat: number,
   startLng: number,
@@ -27,11 +30,9 @@ export async function calculateRoute(
 ) {
   const response = await fetch(`${API_URL}/route`, {
     method: "POST",
-
     headers: {
       "Content-Type": "application/json",
     },
-
     body: JSON.stringify({
       startLat,
       startLng,
